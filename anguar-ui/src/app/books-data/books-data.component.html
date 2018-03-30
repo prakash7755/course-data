@@ -1,9 +1,8 @@
-<div class="container">
+<div class="">
 <div class="table-responsive">
   <table class="table">
-    <thead>
+    <thead class="head">
       <tr>
-      	<th>No</th>
         <th>Title</th>
         <th>Author</th>
         <th>Language</th>
@@ -13,9 +12,8 @@
         <th>Pages</th>
       </tr>
     </thead>
-    <tbody *ngFor="let book of books; let i = index">
+    <tbody *ngFor="let book of pagedItems; let i = index">
       <tr>
-      	<td>{{i + 1}}</td>
         <td>{{book.title}}</td>
         <td>{{book.author}}</td>
         <td>{{book.language}}</td>
@@ -25,6 +23,23 @@
         <td>{{book.pages}}</td>
       </tr>
     </tbody>
+    <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+                <li [ngClass]="{disabled:pager.currentPage === 1}">
+                    <a (click)="setPage(1)">First</a>
+                </li>
+                <li [ngClass]="{disabled:pager.currentPage === 1}">
+                    <a (click)="setPage(pager.currentPage - 1)">Previous</a>
+                </li>
+                <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
+                    <a (click)="setPage(page)">{{page}}</a>
+                </li>
+                <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                    <a (click)="setPage(pager.currentPage + 1)">Next</a>
+                </li>
+                <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                    <a (click)="setPage(pager.totalPages)">Last</a>
+                </li>
+            </ul>
   </table>
 </div>
 </div>

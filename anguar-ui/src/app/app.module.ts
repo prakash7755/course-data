@@ -13,6 +13,7 @@ import { BooksDataComponent } from './books-data/books-data.component';
 
 import { UserAuthService } from './services/user-auth/user-auth.service';
 import { BooksDataService } from './services/books-data/books-data.service';
+import { PaginationService } from './services/pagination/pagination.service';
 
 
 @NgModule({
@@ -28,7 +29,7 @@ import { BooksDataService } from './services/books-data/books-data.service';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [UserAuthService, BooksDataService],
+  providers: [UserAuthService, BooksDataService, PaginationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

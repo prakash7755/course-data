@@ -22,4 +22,4 @@ const tableData = new Schema({
 	imageLink: String
 }, options)
 
-module.exports = mongoose.model('tableDatas', tableData);
+module.exports = mongoose.model('tabledatas', tableData);
