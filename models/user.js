@@ -18,6 +18,7 @@ const user = new Schema({
 	mobNumber: { type: Number, required: requiredFieldMessage('Mobile Number')},
 	email: { type: String, unique: [true, 'This MailID Already Exist'], required: requiredFieldMessage('Email') },
 	password: { type: String, required: requiredFieldMessage('Password')},
+	coPassword: { type: String, required: requiredFieldMessage('ConformPassword')},
 }, options);
 
 

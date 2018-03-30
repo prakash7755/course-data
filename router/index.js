@@ -3,7 +3,7 @@
 const user = require('./user');
 const tableData = require('./table-data');
 const bodyParser = require('body-parser');
-const { verify } = require('../service/token');
+const { tokenServ } = require('../service');
 
 
 
@@ -21,7 +21,7 @@ function routes(app){
     }
     let decodedToken;
     try{
-      decodedToken = verify(token);
+      decodedToken = tokenServ.verify(token);
       next();
     }
     catch(error){

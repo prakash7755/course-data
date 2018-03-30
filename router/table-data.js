@@ -7,7 +7,7 @@ router.route('/data')
 
 .get(async(req, res, next) =>{
 	try{
-      const result = await tableData.find()
+      const result = await tableData.find({})
       res.json(result);
 	}
 	catch(error){

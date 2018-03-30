@@ -13,10 +13,13 @@ const requiredFieldMessage = (field) => {
 
 const tableData = new Schema({
 	id: {type: String, default: uuid},
-	course: { type: String, required: requiredFieldMessage('Course')},
+	language: { type: String, required: requiredFieldMessage('Language')},
+	country: {type: String, required: requiredFieldMessage('Country')},
 	title:  { type: String, required: requiredFieldMessage('Title')},
 	author:  { type: String, required: requiredFieldMessage('Author')},
-	description:  { type: String, required: requiredFieldMessage('Description')},
+	pages:  { type: Number, required: requiredFieldMessage('Pages')},
+	link: String,
+	imageLink: String
 }, options)
 
 module.exports = mongoose.model('tableDatas', tableData);

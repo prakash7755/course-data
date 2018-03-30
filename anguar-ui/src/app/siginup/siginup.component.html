@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col col-md-3 col-md-offset-4">
+      <h2>Sign Up</h2>
+      <form  class="form-group" (ngSubmit)="newUser()" #userForm="ngForm">
+      	<label for="name">Enter Name</label>
+      	<input type="text" name="name" [(ngModel)]="user.userName" class="form-control"  placeholder="Enter Name..." required="">
+        <label for="Pwd">Enter Mob Number</label>
+        <input type="number" name="num" [(ngModel)]="user.mobNumber" class="form-control" placeholder="Enter Mob Number..." required="">
+        <label for="email">Enter Email</label>
+        <input type="email" name="email" [(ngModel)]="user.email" class="form-control" placeholder="Enter Email..." required="">
+        <label for="Pwd">Enter Password</label>
+        <input type="password" name="Pwd" [(ngModel)]="user.password" class="form-control" placeholder="Enter Password..." required="">
+        <label for="Pwd">Enter Co-Password</label>
+        <input type="password" name="Pwd" [(ngModel)]="user.coPassword" class="form-control" placeholder="Enter Co-Password..." required="">
+        <button type="submit" class="btn btn-success subBtn">Sumbit</button>
+      </form>
+    </div>
+  </div>

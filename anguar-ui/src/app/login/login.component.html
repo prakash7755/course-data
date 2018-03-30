@@ -1,0 +1,13 @@
+  <div class="row">
+    <div class="col col-md-3 col-md-offset-4">
+      <h2>User Login</h2>
+      <form  name="logiUser" class="form-group" (ngSubmit)="verifyUser()" #userForm="ngForm">
+        <label for="email">Enter Email:</label>
+        <input type="email" name="email" [(ngModel)]="user.email" class="form-control" placeholder="Enter Email..." required>
+        <label for="Pwd">Enter Password:</label>
+        <input type="password" name="Pwd" [(ngModel)]="user.password" class="form-control" placeholder="Enter Password..." required>
+        <button type="submit" class="btn btn-success subBtn">Sumbit</button>
+      </form>
+    </div>
+  </div>
+

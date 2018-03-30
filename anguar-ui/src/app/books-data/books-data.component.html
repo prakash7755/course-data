@@ -1,0 +1,31 @@
+<div class="container">
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+      	<th>No</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Language</th>
+        <th>Wiki Link</th>
+        <th>Book</th>
+        <th>Country</th>
+        <th>Pages</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let book of books; let i = index">
+      <tr>
+      	<td>{{i + 1}}</td>
+        <td>{{book.title}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.language}}</td>
+        <td><a href="{{book.link}}">{{book.link}}</a></td>
+        <td><img src="assets/{{book.imageLink}}" alt="" height="60" width="60"></td>
+        <td>{{book.country}}</td>
+        <td>{{book.pages}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
